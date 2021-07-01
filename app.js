@@ -9,8 +9,10 @@ const guesss_remaining_section = document.getElementById('guesses-left');
 const message_section = document.getElementById('message-section');
 
 
+const random_number = genRandNum(10);
 let counter = 0; 
-let random_number = genRandNum(10);
+
+message(guesss_remaining_section, `You have 3 attempt(s) to guess correctly`);
 
 
 submit_guess_btn.addEventListener('click', ()=> {
@@ -23,8 +25,6 @@ submit_guess_btn.addEventListener('click', ()=> {
     
     else {
         counter++;
-   
-        let guesses_left = 3 - counter;
    
         if (counter === 3 && input !== random_number){
             message(message_section, `GAME OVER... Answer was ${random_number}`);
@@ -45,7 +45,7 @@ submit_guess_btn.addEventListener('click', ()=> {
             return 0;
         }
     
-        message(guesss_remaining_section,`You have ${guesses_left} attempt(s) to guess correctly`);
+        message(guesss_remaining_section, `You have ${ 3 - counter } attempt(s) to guess correctly`);
     }
 
 });

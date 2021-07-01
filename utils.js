@@ -7,17 +7,21 @@ export function genRandNum(num){
 }
 
 
+
 export function message(ele, str){
 
 
-    return ele.innerText = str;
+   ele.innerText = str;
 
 
 }
 
+
+
+
 export function toggle(str){
 
-    return str.disabled = true;         
+  str.disabled = true;         
 
 
 }
