@@ -30,7 +30,6 @@ submit_guess_btn.addEventListener('click', ()=> {
             message(message_section, `GAME OVER... Answer was ${random_number}`);
             message(guesss_remaining_section, '');
             toggle(submit_guess_btn);
-            return 0;
         }
         else if (input > random_number){
             message(message_section, 'You guessed too high');
@@ -42,7 +41,7 @@ submit_guess_btn.addEventListener('click', ()=> {
             message(message_section, 'YOU GOT IT CORRECT');
             message(guesss_remaining_section, '');
             toggle(submit_guess_btn);
-            return 0;
+            
         }
     
         message(guesss_remaining_section, `You have ${ 3 - counter } attempt(s) to guess correctly`);
