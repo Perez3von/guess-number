@@ -19,7 +19,7 @@ submit_guess_btn.addEventListener('click', ()=> {
  
     let input = parseInt(user_input.value); 
     
-    if (isNaN(input) || input > 10){
+    if (isNaN(input) || input > 10 || input < 1){
         alert('error');
     }
     
